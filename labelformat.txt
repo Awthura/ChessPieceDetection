@@ -1,0 +1,33 @@
+Our convention
+
+0 - WP
+1 - BP
+2 - WK
+3 - BK
+4 - WQ
+5 - BQ
+6 - WB
+7 - BB
+8 - WR
+9 - BR
+10 - WN
+11- BN
+
+Roboflow convention
+
+1 - 'black-bishop',
+2 - 'black-king',
+3 - 'black-knight',
+4 - 'black-pawn',
+5 - 'black-queen',
+6 - 'black-rook',
+7 - 'white-bishop',
+8 - 'white-king',
+9 - 'white-knight',
+10 - 'white-pawn',
+11 - 'white-queen',
+12 - 'white-rook'
+
+mappings
+
+[(0,10),(1,4),(2,8),(3,2),(4,11),(5,5),(6,7),(7,1),(8,12),(9,6),(10,9),(11,3)]
