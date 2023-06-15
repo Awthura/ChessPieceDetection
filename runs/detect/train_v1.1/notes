@@ -1,0 +1,3 @@
+Epochs: 60
+Model: yolov8s
+Augmentation: FlipLR

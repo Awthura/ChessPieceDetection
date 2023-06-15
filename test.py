@@ -1,6 +1,6 @@
 import os
 
-image_folder = "./test/images"
+image_folder = "./test/predict"
 
 # Iterate through the images in the folder
 for filename in os.listdir(image_folder):

@@ -1,1 +1,1 @@
-yolo task=detect mode=train epochs=50 data=data.yaml model=yolov8s.pt imgsz=640
+yolo task=detect mode=train epochs=60 data=data.yaml model=yolov8s.pt imgsz=640

@@ -5,15 +5,15 @@ test: ./test
 nc: 12
 names: ['WP', 'BP', 'WK', 'BK', 'WQ', 'BQ', 'WB', 'BB', 'WR', 'BR', 'WN', 'BN']
 
-# augment:
-#   - FlipUD
-#   - FlipLR
-#   - Scale: [0.8, 1.2]  # Adjust scaling range based on chess piece sizes
-#   - Rotate: [-15, 15]  # Increase rotation range to handle occlusion
-#   - Translate: [0.2, 0.2]  # Increase translation range for better robustness
+augment:
+  # - FlipUD
+  - FlipLR
+  # - Scale: [0.8, 1.2]  # Adjust scaling range based on chess piece sizes
+  # - Rotate: [-15, 15]  # Increase rotation range to handle occlusion
+  # - Translate: [0.2, 0.2]  # Increase translation range for better robustness
 
-# test_augment:
-#   - FlipUD
-#   - FlipLR
+test_augment:
+  # - FlipUD
+  - FlipLR
 
 # Add any additional parameters or sections as needed
