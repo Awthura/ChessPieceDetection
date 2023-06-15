@@ -4,3 +4,40 @@ test: ./test
 
 nc: 12
 names: ['WP', 'BP', 'WK', 'BK', 'WQ', 'BQ', 'WB', 'BB', 'WR', 'BR', 'WN', 'BN']
+
+
+train_parameters:
+  batch_size: 16  # Increase batch size for better sampling
+  learning_rate: 0.0001  # Lower learning rate for more stable updates
+  num_epochs: 200  # Increase the number of epochs for more training time
+  optimizer: Adam
+  weight_decay: 0.0001  # Lower weight decay for reduced regularization
+  lr_scheduler:
+    type: step
+    milestones: [100, 150]  # Adjust based on the total number of epochs
+    gamma: 0.1
+  save_dir: ./checkpoints
+  log_dir: ./logs
+  checkpoint_interval: 20
+  evaluation_interval: 10
+
+augment:
+  - FlipUD
+  - FlipLR
+  - Scale: [0.8, 1.2]  # Adjust scaling range based on chess piece sizes
+  - Rotate: [-15, 15]  # Increase rotation range to handle occlusion
+  - Translate: [0.2, 0.2]  # Increase translation range for better robustness
+
+test_augment:
+  - FlipUD
+  - FlipLR
+
+dataset:
+  train_path: ./train
+  val_path: ./val
+  test_path: ./test
+  input_size: 416
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+
+# Add any additional parameters or sections as needed
